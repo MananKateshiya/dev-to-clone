@@ -22,7 +22,7 @@ function Topbar({src}: {src: StaticImageData}) {
               placeholder="Search..."
             />
 
-            <MagnifyingGlassIcon className="absolute right-0 rounded-md h-9 w-9 p-1 text-lg font-bold  cursor-pointer hover:bg-blue-100 hover:text-blue-900" />
+            <MagnifyingGlassIcon className="absolute right-0 rounded-md h-10 w-10 p-2 text-lg font-bold  cursor-pointer hover:bg-blue-50 hover:text-blue-900" />
           </div>
         </div>
 
@@ -30,9 +30,9 @@ function Topbar({src}: {src: StaticImageData}) {
         {/*  Right  */}
 
         <div className="inline-flex items-center gap-x-3">
-          <button className="hidden px-3 py-2 border-[1px] font-btnFont font-medium text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white rounded-md md:inline-flex">Create Post</button>
-          <MagnifyingGlassIcon className="hidden rounded-md h-10 w-10 p-2 text-lg font-bold  cursor-pointer hover:bg-blue-100 hover:text-blue-900 max-md:inline-flex" />
-          <BellIcon className="h-10 w-10 py-2 " />
+          <button className="hidden px-3 py-2 border-[1px] font-btnFont font-medium text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white hover:underline  rounded-md md:inline-flex">Create Post</button>
+          <MagnifyingGlassIcon className="hidden rounded-md h-10 w-10 p-2 text-lg font-bold  cursor-pointer hover:bg-blue-50 hover:text-blue-900 max-md:inline-flex" />
+          <BellIcon className="h-10 w-10 py-2 cursor-pointer rounded-md hover:bg-blue-50 hover:text-blue-900" />
 
           <div className="flex h-8 w-8 hover:ring-4 ring-slate-200 items-center justify-center bg-slate-300 rounded-full overflow-hidden">
             
