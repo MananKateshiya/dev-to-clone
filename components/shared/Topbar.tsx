@@ -7,7 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 function Topbar({ src }: { src: StaticImageData }) {
   return (
-    <header className="py-2 px-2 md:px-4 bg-white fixed top-0 z-30 w-full shadow-sm">
+    <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
         {/* Left */}
         <div className="inline-flex items-center gap-x-2 md:gap-x-4">
@@ -43,7 +43,7 @@ function Topbar({ src }: { src: StaticImageData }) {
         {/*  Right  */}
 
         <div className="inline-flex items-center gap-x-3">
-          <button className="hidden px-4 py-2 border font-btnFont font-medium outline-none focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
+          <button className="hidden px-4 py-2 border font-btnFont font-medium  focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
             Create Post
           </button>
           <Link

@@ -9,19 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        focusblue: '#3B49DE',
-        buttonHover: '#3A48DF',
-        btnFontColor:'#3B49DF',
-        hoverAccent:'#E6E7F6',
-        
-        
+        color_light: "#505050",
+        color_dark: "#404040",
+        focusblue: "#3B49DE",
+        buttonHover: "#3A48DF",
+        btnFontColor: "#3B49DF",
+        hoverAccent: "#E6E7F6",
       },
-      fontFamily:{
-        'logo': ['Unispace'],
-        'btnFont': ['Segoe UI'],
-      }
+      fontWeight: {
+        thin2: "400",
+        medium2: "600",
+      },
     },
-
+    fontFamily: {
+      logo: ["Unispace"],
+      btnFont: ["Segoe UI"],
+      basefont: ["Segoe UI"],
+    },
   },
   plugins: [],
 };

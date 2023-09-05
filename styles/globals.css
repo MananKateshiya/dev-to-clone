@@ -14,4 +14,10 @@ body {
   .focusRing{
     @apply ring-2 ring-offset-2 ring-[#3B49DE] outline-none
   }
+
+}
+
+
+.nounder{
+  text-decoration: none !important;
 }

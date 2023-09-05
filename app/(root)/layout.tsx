@@ -1,9 +1,10 @@
-import Topbar from "@/components/shared/Topbar";
-import "./globals.css";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import imgSrc from '@/assets/user.png';
-const inter = Inter({ subsets: ["latin"] });
+// import { Inter } from "next/font/google";
+import imgSrc from "@/assets/user.png";
+import Topbar from "@/components/shared/Topbar";
+
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "A Dev.to Clone",
@@ -17,8 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Topbar src={imgSrc}/>
+      {/* <body className={inter.className}> */}
+      <body>
+        <Topbar src={imgSrc} />
         <main>
           <section className="main-container">
             <div className="w-full max-w-4xl">{children}</div>
