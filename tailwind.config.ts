@@ -12,7 +12,9 @@ const config: Config = {
         focusblue: '#3B49DE',
         buttonHover: '#3A48DF',
         btnFontColor:'#3B49DF',
-        hoverAccent:'#2f3ab2',
+        hoverAccent:'#E6E7F6',
+        
+        
       },
       fontFamily:{
         'logo': ['Unispace'],

@@ -1,43 +1,75 @@
-import { MagnifyingGlassIcon, Bars3Icon, BellIcon } from "@heroicons/react/24/outline";
+import {
+  MagnifyingGlassIcon,
+  Bars3Icon,
+  BellIcon,
+} from "@heroicons/react/24/outline";
 import Image, { StaticImageData } from "next/image";
-function Topbar({src}: {src: StaticImageData}) {
+import Link from "next/link";
+function Topbar({ src }: { src: StaticImageData }) {
   return (
-    <header className="py-2 px-4 bg-white fixed top-0 z-30 w-full shadow-sm">
+    <header className="py-2 px-2 md:px-4 bg-white fixed top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
         {/* Left */}
-        <div className="inline-flex items-center gap-x-4">
-          <div className="flex md:hidden">
-            <Bars3Icon className="h-10 w-10 p-1 " />
-          </div>
-          <div className="w-[46px] h-[36px] shrink-0 py-1 rounded-[4px] font-logo text-lg text-white text-center bg-black select-none cursor-pointer">
-            DEV
-          </div>
-
+        <div className="inline-flex items-center gap-x-2 md:gap-x-4">
+          <Link
+            href={"/"}
+            className="rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
+          >
+            <Bars3Icon className="h-10 w-10 p-1" />
+          </Link>
+          <Link href={"/"} className="focus:focusRing">
+            <div className="w-[46px] h-[36px] rounded-[4px] shrink-0 py-1  font-logo text-lg text-white text-center bg-black select-none">
+              DEV
+            </div>
+          </Link>
           <div className="items-center relative md:flex hidden">
             <input
-              className=" py-2 pl-2 pr-12 placeholder-gray-900 placeholder:font-sans border-[1px] border-gray-300 rounded-md hover:border-gray-400 outline-none focus:ring-2 focus:ring-focusblue focus:border-none focus:shadow-sm focus:ease-in duration-150"
+              className=" py-2 pl-2 pr-12 placeholder-gray-900 placeholder:font-sans border border-gray-300 rounded-md hover:border-gray-400 outline-none focus:ring-2 focus:ring-focusblue focus:border-none focus:shadow-sm focus:ease-in duration-130"
               type="text"
               size={35}
               name="Search"
               placeholder="Search..."
             />
 
-            <MagnifyingGlassIcon className="absolute right-0 rounded-md h-10 w-10 p-2 text-lg font-bold  cursor-pointer hover:bg-blue-50 hover:text-blue-900" />
+            <Link
+              href={"/"}
+              className="absolute right-0 rounded-md h-10 w-10 p-2 text-lg font-bold focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
+            >
+              <MagnifyingGlassIcon />
+            </Link>
           </div>
         </div>
 
-        
         {/*  Right  */}
 
         <div className="inline-flex items-center gap-x-3">
-          <button className="hidden px-3 py-2 border-[1px] font-btnFont font-medium text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white hover:underline  rounded-md md:inline-flex">Create Post</button>
-          <MagnifyingGlassIcon className="hidden rounded-md h-10 w-10 p-2 text-lg font-bold  cursor-pointer hover:bg-blue-50 hover:text-blue-900 max-md:inline-flex" />
-          <BellIcon className="h-10 w-10 py-2 cursor-pointer rounded-md hover:bg-blue-50 hover:text-blue-900" />
+          <button className="hidden px-4 py-2 border font-btnFont font-medium outline-none focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
+            Create Post
+          </button>
+          <Link
+            href={"/"}
+            className="hidden rounded-md h-10 w-10 p-2  focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900 max-md:inline-flex"
+          >
+            <MagnifyingGlassIcon />
+          </Link>
 
-          <div className="flex h-8 w-8 hover:ring-4 ring-slate-200 items-center justify-center bg-slate-300 rounded-full overflow-hidden">
-            
-            <Image className=" ring-4 ring-pink-500 ring-offset-8  cursor-pointer" src={src} alt="User Profile Pic"/>
-          </div>
+          <Link
+            href={"/"}
+            className="rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
+          >
+            <BellIcon className="h-10 w-10 py-2 " />
+          </Link>
+
+          <Link
+            href={"/"}
+            className="group rounded-full focus:focusRing focus:ring-offset-4"
+          >
+            <Image
+              className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden bg-slate-300 ring-slate-200  hover:ring-4 hover:ring-slate-300 group-focus:ring-2 group-focus:ring-slate-300"
+              src={src}
+              alt="User Profile Pic"
+            />
+          </Link>
         </div>
       </div>
     </header>
