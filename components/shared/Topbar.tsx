@@ -13,7 +13,7 @@ function Topbar({ src }: { src: StaticImageData }) {
         <div className="inline-flex items-center gap-x-2 md:gap-x-4">
           <Link
             href={"/"}
-            className="rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
+            className="flex md:hidden rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
           >
             <Bars3Icon className="h-10 w-10 p-1" />
           </Link>
