@@ -1,11 +1,10 @@
 import {
   MagnifyingGlassIcon,
-  Bars3Icon,
   BellIcon,
 } from "@heroicons/react/24/outline";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import ToggleButton from "./LeftToggleMenuButton";
+import ToggleButton from "./LeftSidebarMobile";
 
 
 function Topbar({ src }: { src: StaticImageData }) {
