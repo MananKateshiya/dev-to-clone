@@ -5,18 +5,16 @@ import {
 } from "@heroicons/react/24/outline";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import ToggleButton from "./LeftToggleMenuButton";
+
+
 function Topbar({ src }: { src: StaticImageData }) {
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
         {/* Left */}
         <div className="inline-flex items-center gap-x-2 md:gap-x-4">
-          <Link
-            href={"/"}
-            className="flex md:hidden rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
-          >
-            <Bars3Icon className="h-10 w-10 p-1" />
-          </Link>
+          <ToggleButton />
           <Link href={"/"} className="focus:focusRing">
             <div className="w-[46px] h-[36px] rounded-[4px] shrink-0 py-1  font-logo text-lg text-white text-center bg-black select-none">
               DEV

@@ -1,10 +1,12 @@
-type sidebarObj = {
+type SidebarObj = {
   emoji: string;
   route: string;
   label: string;
 };
-
-export const sidebarLinks: sidebarObj[] = [
+type SidebarTagObj = {
+  tag: string;
+};
+export const sidebarLinks: SidebarObj[] = [
   {
     emoji: "🏠",
     route: "/",
@@ -64,5 +66,68 @@ export const sidebarLinks: sidebarObj[] = [
     emoji: "🤔",
     route: "/software-comparisons",
     label: "Software Comparisions",
+  },
+];
+
+export const sidebarLinksOther: SidebarObj[] = [
+  {
+    emoji: "👍",
+    route: "/code-of-conduct",
+    label: "Code of Conduct",
+  },
+  {
+    emoji: "🤓",
+    route: "/privacy",
+    label: "Privacy Policy",
+  },
+  {
+    emoji: "👀",
+    route: "/terms",
+    label: "Terms of use",
+  },
+];
+
+export const sidebarTags: SidebarTagObj[] = [
+  {
+    tag: "webdev",
+  },
+  {
+    tag: "javascript",
+  },
+  {
+    tag: "beginners",
+  },
+  {
+    tag: "programming",
+  },
+  {
+    tag: "tutorial",
+  },
+  {
+    tag: "react",
+  },
+  {
+    tag: "productivity",
+  },
+  {
+    tag: "career",
+  },
+  {
+    tag: "typescript",
+  },
+  {
+    tag: "ai",
+  },
+  {
+    tag: "github",
+  },
+  {
+    tag: "cloud",
+  },
+  {
+    tag: "design",
+  },
+  {
+    tag: "computerscience",
   },
 ];
