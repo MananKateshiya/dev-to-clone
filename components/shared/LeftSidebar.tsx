@@ -5,9 +5,9 @@ function LeftSidebar() {
     <section className="flex flex-col">
       <nav className="flex flex-col text-color_dark w-full font-thin2 max-md:hidden ">
         {sidebarLinks.map((link) => (
-          <div className="group">
+          <div className="group" key={link.label}>
             <Link
-              key={link.label}
+              
               href={link.route}
               className="group flex items-center px-2 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 rounded-md"
             >
@@ -37,9 +37,9 @@ function LeftSidebar() {
       </h2>
       <nav className="flex flex-col text-color_dark w-full font-thin2 max-md:hidden">
         {sidebarLinksOther.map((links) => (
-          <div className="group">
+          <div className="group" key={links.label}>
             <Link
-              key={links.label}
+              
               href={links.route}
               className="flex items-center px-2 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 rounded-md"
             >
@@ -53,7 +53,8 @@ function LeftSidebar() {
           </div>
         ))}
       </nav>
-      <div className="flex mb-4 justify-start items-center pt-2 pb-0  max-md:hidden">
+
+      <div className="flex mb-4 justify-start items-center pt-2 pb-0 max-md:hidden">
         {/* TWITTER X */}
         <a
           href="https://x.com/MananKateshiya"
@@ -69,18 +70,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+              fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(8.53333,8.53333)">
@@ -105,18 +106,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+               fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(5.12,5.12)">
@@ -140,18 +141,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+               fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(5.12,5.12)">
@@ -176,18 +177,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+               fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(5.12,5.12)">
@@ -211,18 +212,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+               fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(10.66667,10.66667)">
@@ -244,18 +245,18 @@ function LeftSidebar() {
           >
             <g
               fill="#404040"
-              fill-rule="nonzero"
+              fillRule="nonzero"
               stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+               fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
               className="mix-blend-mode: normal group-hover:fill-blue-900"
             >
               <g transform="scale(8,8)">
@@ -265,6 +266,9 @@ function LeftSidebar() {
           </svg>
         </a>
       </div>
+
+
+
 
       {/* MY TAGS - HIDDEN IN MOBILE */}
       <nav className=" max-md:hidden">

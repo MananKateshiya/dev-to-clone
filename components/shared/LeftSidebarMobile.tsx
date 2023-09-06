@@ -24,7 +24,7 @@ function ToggleButton(): React.ReactElement {
         <>
           {/* <LeftSidebarMobile /> */}
           <section
-            id="sidebar_mobile"
+            
             className="flex max-w-1/2 h-[100vh] absolute flex-col top-14 bottom-0 left-0 bg-white px-2 md:hidden"
           >
             <div className="flex items-center justify-between p-2">
@@ -36,9 +36,9 @@ function ToggleButton(): React.ReactElement {
             </div>
             <nav className="flex flex-col text-color_dark w-full font-thin2 md:hidden px-2 py-1.5">
               {sidebarLinks.map((link) => (
-                <div className="group">
+                <div className="group"  key={link.label}>
                   <Link
-                    key={link.label}
+                   
                     href={link.route}
                     className="group flex items-center px-2 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 rounded-md"
                   >
@@ -68,9 +68,9 @@ function ToggleButton(): React.ReactElement {
             </h2>
             <nav className="flex flex-col px-2 text-color_dark w-full font-thin2 md:hidden">
               {sidebarLinksOther.map((links) => (
-                <div className="group">
+                <div className="group" key={links.label}>
                   <Link
-                    key={links.label}
+                    
                     href={links.route}
                     className="flex items-center px-2 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 rounded-md"
                   >
@@ -84,6 +84,7 @@ function ToggleButton(): React.ReactElement {
                 </div>
               ))}
             </nav>
+      
             <div className="flex mb-4 justify-start items-center px-2 pt-2 pb-0  md:hidden">
               {/* TWITTER X */}
               <a
@@ -100,18 +101,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(8.53333,8.53333)">
@@ -136,18 +137,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(5.12,5.12)">
@@ -171,18 +172,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(5.12,5.12)">
@@ -207,18 +208,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(5.12,5.12)">
@@ -242,18 +243,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(10.66667,10.66667)">
@@ -275,18 +276,18 @@ function ToggleButton(): React.ReactElement {
                 >
                   <g
                     fill="#404040"
-                    fill-rule="nonzero"
+                    fillRule="nonzero"
                     stroke="none"
-                    stroke-width="1"
-                    stroke-linecap="butt"
-                    stroke-linejoin="miter"
-                    stroke-miterlimit="10"
-                    stroke-dasharray=""
-                    stroke-dashoffset="0"
-                    font-family="none"
-                    font-weight="none"
-                    font-size="none"
-                    text-anchor="none"
+                    strokeWidth="1"
+                    strokeLinecap="butt"
+                    strokeLinejoin="miter"
+                    strokeMiterlimit="10"
+                    strokeDasharray=""
+                    strokeDashoffset="0"
+                    fontFamily="none"
+                     fontWeight="none"
+                    fontSize="none"
+                    textAnchor="none"
                     className="mix-blend-mode: normal group-hover:fill-blue-900"
                   >
                     <g transform="scale(8,8)">
@@ -296,6 +297,10 @@ function ToggleButton(): React.ReactElement {
                 </svg>
               </a>
             </div>
+
+
+
+
           </section>
         </>
       )}
