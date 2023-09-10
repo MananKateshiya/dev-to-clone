@@ -1,9 +1,11 @@
 import { sidebarLinks, sidebarLinksOther, sidebarTags } from "@/constants";
 import Link from "next/link";
+
 function LeftSidebar() {
   return (
     <section className="flex flex-col">
       <nav className="flex flex-col text-color_dark w-full font-thin2 max-md:hidden ">
+
         {sidebarLinks.map((link) => (
           <div className="group" key={link.label}>
             <Link
@@ -268,8 +270,6 @@ function LeftSidebar() {
       </div>
 
 
-
-
       {/* MY TAGS - HIDDEN IN MOBILE */}
       <nav className=" max-md:hidden">
         <header className="flex items-center justify-between mx-2">
@@ -289,7 +289,7 @@ function LeftSidebar() {
           {sidebarTags.map((tags) => (
             <Link
               key={tags.tag}
-              href={`/t/${tags.tag}`}
+              href={`t/${tags.tag}`}
               className=" flex items-center px-2.5 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 hover:underline focus:underline rounded-md"
             >
               <span className="text-md py-0.5 focus:focusRing focus:bg-hoverAccent ">
