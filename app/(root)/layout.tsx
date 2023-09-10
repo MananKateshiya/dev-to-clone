@@ -23,7 +23,7 @@ export default function RootLayout({
         <Topbar src={imgSrc} />
         <main>
           <section className="main-container">
-            <div className="w-full max-w-4xl">{children}</div>
+            <div className="">{children}</div>
           </section>
         </main>
       </body>

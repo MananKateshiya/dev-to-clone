@@ -38,7 +38,6 @@ function Topbar({ src }: { src: StaticImageData }) {
         </div>
 
         {/*  Right  */}
-
         <div className="inline-flex items-center gap-x-3">
           <button className="hidden px-4 py-2 border font-btnFont font-medium  focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
             Create Post
