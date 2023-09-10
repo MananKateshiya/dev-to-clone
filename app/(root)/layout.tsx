@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import imgSrc from "@/assets/user.png";
 import Topbar from "@/components/shared/Topbar";
+import TopSortBar from "@/components/shared/TopSortBar";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       {/* <body className={inter.className}> */}
       <body>
         <Topbar src={imgSrc} />
+
         <main>
           <section className="main-container">
             <div className="">{children}</div>

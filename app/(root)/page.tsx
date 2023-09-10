@@ -1,6 +1,7 @@
 import BlogCard from "@/components/cards/BlogCard";
 import RightCards from "@/components/cards/RightCards";
 import LeftSidebar from "@/components/shared/LeftSidebar";
+import TopSortBar from "@/components/shared/TopSortBar";
 
 // (ROOT) -> HOME
 
@@ -13,14 +14,20 @@ export default function Home(): React.ReactElement {
           <LeftSidebar />
         </div>
         {/* MIDDLE */}
+
         <section className="inline-block mx-3 w-full">
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
-        <BlogCard name="Middle" />
+          <div className="flex">
+            <TopSortBar />
+          </div>
+          <div className="">
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          <BlogCard name="Middle" />
+          </div>
         </section>
         {/* RIGHT */}
         <div className="inline-block w-1/2 mx-1 sm:mr-4 max-lg:hidden">
