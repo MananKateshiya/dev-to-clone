@@ -2,12 +2,13 @@ import BlogCard from "@/components/cards/BlogCard";
 import RightCards from "@/components/cards/RightCards";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import TopSortBar from "@/components/shared/TopSortBar";
+import { Suspense, lazy } from "react";
 
 // (ROOT) -> HOME
 
-export default function Home(): React.ReactElement {
+async function Home(): Promise<React.ReactElement> {
   return (
-    <div className="py-2 px-2">
+    <section className="py-2 px-2">
       <div className="flex justify-between mx-auto max-w-7xl">
         {/* LEFT */}
         <div className="flex items-cente">
@@ -19,22 +20,27 @@ export default function Home(): React.ReactElement {
           <div className="flex">
             <TopSortBar />
           </div>
-          <div className="">
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          <BlogCard name="Middle" />
-          </div>
+
+          <Suspense
+            fallback={
+              <h1 className="w-full text-center mx-auto h-20 text-white bg-red-500">
+                LOADING TODOS.......
+              </h1>
+            }
+          >
+            {/* BLOGS / TODOS Will appear here */}
+            <BlogCard />
+          </Suspense>
         </section>
+
         {/* RIGHT */}
         <div className="inline-block w-1/2 mx-1 sm:mr-4 max-lg:hidden">
           <RightCards name="Right Card" />
           <RightCards name="Right Card" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+export default Home;

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Suspense } from "react";
+import Loading from "../../loading";
 
 type TodoType = {
   userId: number;
@@ -19,17 +20,26 @@ async function fetchTodos(id: string) {
 }
 
 async function TodoPage({ params: { tags } }: PageParams) {
+  
   const td = await fetchTodos(tags);
 
   return (
     <div>
-      Todos:
-      <p>ID: {td.id}</p>
-      <p>User ID: {td.userId}</p>
-      <p>Title: {td.title}</p>
-      <p>Completed: {JSON.stringify(td.completed)}</p>
+      <Suspense fallback={<Loading />}>
+        Todos:
+        <p>ID: {td.id}</p>
+        <p>User ID: {td.userId}</p>
+        <p>Title: {td.title}</p>
+        <p>Completed: {JSON.stringify(td.completed)}</p>
+      </Suspense>
     </div>
   );
 }
 
 export default TodoPage;
+
+export async function wait(ms: number) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}

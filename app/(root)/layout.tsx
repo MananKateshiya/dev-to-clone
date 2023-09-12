@@ -1,11 +1,8 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import imgSrc from "@/assets/user.png";
 import Topbar from "@/components/shared/Topbar";
-import TopSortBar from "@/components/shared/TopSortBar";
-
-// const inter = Inter({ subsets: ["latin"] });
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "A Dev.to Clone",
@@ -19,14 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <body className={inter.className}> */}
-      <body>
+      <body className="w-screen overflow-x-clip overflow-y-scroll">
         <Topbar src={imgSrc} />
-
         <main>
-          <section className="main-container">
-            <div className="">{children}</div>
-          </section>
+          {children}
         </main>
       </body>
     </html>
