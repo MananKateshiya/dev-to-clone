@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import imgSrc from "@/assets/user.png";
 import Topbar from "@/components/shared/Topbar";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "A Dev.to Clone",

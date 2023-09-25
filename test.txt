@@ -1,0 +1,67 @@
+THE MAIN PAGE.tsx for "/"
+
+// "use client"
+// import BlogCard from "@/components/cards/BlogCard";
+import RightCards from "@/components/cards/RightCards";
+import TopSortBar from "@/components/shared/TopSortBar";
+import { Suspense, lazy } from "react";
+import { usePathname } from "next/navigation";
+import LeftSidebar from "@/components/shared/LeftSidebar";
+const BlogCard = lazy(() => import("@/components/cards/BlogCard"));
+// (ROOT) -> HOME
+
+function Home(): React.ReactElement {
+  // const path = usePathname();
+  let path = "/";
+
+  return (
+    <section className="py-2 px-2">
+
+      <div className="flex justify-between mx-auto max-w-7xl">
+        {/* LEFT */}
+        <div className="flex items-center">
+          <LeftSidebar />
+        </div>
+        {/* MIDDLE */}
+
+        <section className="inline-block mx-3 w-full">
+          <div className="flex">
+            <TopSortBar />
+            
+          </div>
+
+          <Suspense
+            fallback={
+              <h1 className="w-full text-center mx-auto h-20 text-white bg-red-500">
+                LOADING TODOS.......
+              </h1>
+            }
+          >
+            
+            {/* BLOGS / TODOS Will appear here */}
+
+            {path === "/" && <BlogCard isLatest={false} limit={10} />}
+            {path === "/relevant" && <BlogCard isLatest={false} limit={25} />}
+            {path === "/latest" && <BlogCard isLatest={false} limit={5} />}
+            {path === "/top" && <BlogCard isLatest={true} limit={25} />}
+          </Suspense>
+        </section>
+
+        {/* RIGHT */}
+        <div className="inline-block w-1/2 mx-1 sm:mr-4 max-lg:hidden">
+          <RightCards name="Right Card" />
+          <RightCards name="Right Card" />
+        </div>
+
+
+      </div>
+    </section>
+  );
+}
+function lazyload(promise: any) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 2000);
+  }).then(() => promise);
+}
+
+export default Home;

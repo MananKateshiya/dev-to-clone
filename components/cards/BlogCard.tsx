@@ -7,18 +7,27 @@ type TodoType = {
   completed: boolean;
 };
 
-async function BlogCard() {
+type PageParams = {
+  isLatest: boolean;
+  limit: number;
+};
+
+async function BlogCard({ isLatest = false, limit }: PageParams) {
   const fetchAllTodo = async () => {
     const data = fetch("https://jsonplaceholder.typicode.com/todos");
     const res = (await data).json();
     return res;
   };
 
-  const todos: TodoType[] = await fetchAllTodo();
+  let todos: TodoType[] = await fetchAllTodo();
 
+  
+  isLatest === true ? (todos = todos.reverse()) : todos;
+  
   return (
     <div>
-      {todos.map((itm) => (
+      
+      {todos.slice(0,limit).map((itm) => (
         <div
           key={itm.id}
           className="h-60 my-2 mx-auto rounded-md shadow-sm bg-white"

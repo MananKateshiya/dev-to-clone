@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import Loading from "../../loading";
+import Loading from "@/app/(root)/loading";
 
 type TodoType = {
   userId: number;
@@ -8,19 +8,20 @@ type TodoType = {
   completed: boolean;
 };
 type PageParams = {
-  params: {
-    tags: string;
-  };
+  params:{
+    tags: number;
+  }
 };
 
-async function fetchTodos(id: string) {
+async function fetchTodos(id: number) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
   const todo: TodoType = await res.json();
   return todo;
 }
 
-async function TodoPage({ params: { tags } }: PageParams) {
+async function TodoPage( {params:{ tags }} : PageParams) {
   
+ 
   const td = await fetchTodos(tags);
 
   return (
@@ -38,8 +39,8 @@ async function TodoPage({ params: { tags } }: PageParams) {
 
 export default TodoPage;
 
-export async function wait(ms: number) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+// export async function wait(ms: number) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms);
+//   });
+// }

@@ -1,36 +1,34 @@
-import BlogCard from "@/components/cards/BlogCard";
-import RightCards from "@/components/cards/RightCards";
+import Topbar from "@/components/shared/Topbar";
+import "@/styles/globals.css";
+import type { Metadata } from "next";
+import imgSrc from "@/assets/user.png";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import TopSortBar from "@/components/shared/TopSortBar";
-import { Suspense, lazy } from "react";
+import RightCards from "@/components/cards/RightCards";
+export const metadata: Metadata = {
+  title: "A Dev.to Clone - Posts",
+  description: "Dev Blog and Social Network",
+};
 
-// (ROOT) -> HOME
-
-async function Home(): Promise<React.ReactElement> {
+export default function PostsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <section className="py-2 px-2">
       <div className="flex justify-between mx-auto max-w-7xl">
         {/* LEFT */}
-        <div className="flex items-cente">
+        <div className="flex items-center">
           <LeftSidebar />
         </div>
         {/* MIDDLE */}
 
         <section className="inline-block mx-3 w-full">
-          <div className="flex">
+          <div className="inline-flex">
             <TopSortBar />
           </div>
-
-          <Suspense
-            fallback={
-              <h1 className="w-full text-center mx-auto h-20 text-white bg-red-500">
-                LOADING TODOS.......
-              </h1>
-            }
-          >
-            {/* BLOGS / TODOS Will appear here */}
-            <BlogCard />
-          </Suspense>
+          {children}
         </section>
 
         {/* RIGHT */}
@@ -42,5 +40,3 @@ async function Home(): Promise<React.ReactElement> {
     </section>
   );
 }
-
-export default Home;
