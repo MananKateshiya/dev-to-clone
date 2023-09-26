@@ -20,7 +20,7 @@ function Home(): React.ReactElement {
           }
         >
           {/* BLOGS / TODOS Will appear here */}
-          <BlogCard isLatest={false} limit={1} />
+          <BlogCard isLatest={false} limit={5} />
         </Suspense>
       </section>
     </section>

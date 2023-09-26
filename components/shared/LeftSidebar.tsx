@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function LeftSidebar() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col ">
       <nav className="flex flex-col text-color_dark w-full font-thin2 max-md:hidden ">
 
         {sidebarLinks.map((link) => (
