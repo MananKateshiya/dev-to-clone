@@ -18,7 +18,7 @@ export default function PostsLayout({
 
   return (
     <section className="py-2 px-2">
-      <div className="flex justify-between mx-auto max-w-7xl">
+      <div className="flex mx-auto max-w-7xl">
         {/* LEFT */}
         <div className="flex mt-2">
           <LeftSidebar />
@@ -26,8 +26,9 @@ export default function PostsLayout({
         {/* MIDDLE */}
 
         <section className="inline-block md:mx-3 w-full">
-          <div className="inline-flex">
+          <div className="flex">
             <TopSortBar />
+            
           </div>
           <div>
             {loggedIn && (
