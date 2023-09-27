@@ -28,7 +28,6 @@ export default function PostsLayout({
         <section className="inline-block md:mx-3 w-full">
           <div className="flex">
             <TopSortBar />
-            
           </div>
           <div>
             {loggedIn && (
@@ -42,7 +41,9 @@ export default function PostsLayout({
             )}
           </div>
 
-          {children}
+          
+            {children}
+          
         </section>
 
         {/* RIGHT */}

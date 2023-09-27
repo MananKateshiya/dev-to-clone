@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import PostLoading from "@/app/(root)/(posts)/loading";
 // import BlogCard from "@/components/cards/BlogCard";
 const BlogCard = React.lazy(() => import("@/components/cards/BlogCard"));
 
@@ -7,17 +8,12 @@ function page() {
     <section className="flex mx-auto">
       {/* MIDDLE */}
       <section className="inline-block mx-0 md:mr-2 w-full">
-        <Suspense
-          fallback={
-            <h1 className="w-full text-center mx-auto h-20 text-white bg-red-500">
-              LOADING TODOS.......
-            </h1>
-          }
-        >
+      
           {/* BLOGS / TODOS Will appear here */}
+          <Suspense fallback={<PostLoading />}>
           <h1>root ="/month"</h1>
           <BlogCard isLatest={true} limit={10} />
-        </Suspense>
+      </Suspense>
       </section>
     </section>
   );

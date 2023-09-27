@@ -6,7 +6,6 @@ function TopSortBar() {
 
   return (
     <div className="flex gap-x-0 max-sm:flex-col w-full">
-      
       <div className="flex gap-x-1 w-full text-color_light font-basefont text-lg">
         <Link
           href={"/"}
@@ -43,7 +42,7 @@ function TopSortBar() {
         <div className="flex gap-x-1 text-color_light font-basefont text-md items-center">
           <Link
             href={"/top/week"}
-            about="Relevant"
+            about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
               pathName === "/top/week" ? `font-bold` : `font-base`
             }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
@@ -53,7 +52,7 @@ function TopSortBar() {
 
           <Link
             href={"/top/month"}
-            about="Latest"
+            about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
               pathName === "/top/month" ? `font-bold` : `font-base`
             }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
@@ -80,9 +79,7 @@ function TopSortBar() {
             Infinity
           </Link>
         </div>
-        
       )}
-      
     </div>
   );
 }
