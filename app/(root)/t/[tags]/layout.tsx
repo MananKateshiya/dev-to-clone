@@ -7,5 +7,12 @@ export const metadata: Metadata = {
 };
 
 export default function TagLayout({ children }: { children: React.ReactNode }) {
-  return <main>{children}</main>;
+  return (
+
+    <section className="py-2 px-2 w-full">
+      {children}
+    </section>
+  );
 }
+
+  

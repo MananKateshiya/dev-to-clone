@@ -5,13 +5,13 @@ function TopSortBar() {
   const pathName = usePathname();
 
   return (
-    <div className="flex gap-x-0 max-sm:flex-col w-full">
+    <div className="flex pb-2 gap-x-0 max-sm:flex-col w-full">
       <div className="flex gap-x-1 w-full text-color_light font-basefont text-lg">
         <Link
           href={"/"}
           about="Relevant"
           className={`px-3 py-2 rounded-md cursor-pointer ${
-            pathName === "/" ? `font-bold` : `font-base`
+            pathName === "/" ? `font-bold hover:bg-white`  : `font-base`
           }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
         >
           Relevant
@@ -21,7 +21,7 @@ function TopSortBar() {
           href={"/latest"}
           about="Latest"
           className={`px-3 py-2 rounded-md cursor-pointer ${
-            pathName === "/latest" ? `font-bold` : `font-base`
+            pathName === "/latest" ? `font-bold hover:bg-white`  : `font-base`
           }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
         >
           Latest
@@ -31,8 +31,8 @@ function TopSortBar() {
           href={"/top/week"}
           about="Top"
           className={`px-3 py-2 rounded-md cursor-pointer ${
-            pathName.includes("/top") ? `font-bold` : `font-base`
-          }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
+            pathName.includes("/top") ? `font-bold hover:bg-white`  : `font-base`
+          }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
         >
           Top
         </Link>
@@ -44,8 +44,8 @@ function TopSortBar() {
             href={"/top/week"}
             about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
-              pathName === "/top/week" ? `font-bold` : `font-base`
-            }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
+              pathName === "/top/week" ? `font-bold hover:bg-white` : `font-base`
+            }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
           >
             Week
           </Link>
@@ -54,8 +54,8 @@ function TopSortBar() {
             href={"/top/month"}
             about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
-              pathName === "/top/month" ? `font-bold` : `font-base`
-            }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
+              pathName === "/top/month" ? `font-bold hover:bg-white` : `font-base`
+            }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
           >
             Month
           </Link>
@@ -64,8 +64,8 @@ function TopSortBar() {
             href={"/top/year"}
             about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
-              pathName === "/top/year" ? `font-bold` : `font-base`
-            }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
+              pathName === "/top/year" ? `font-bold hover:bg-white` : `font-base`
+            }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
           >
             Year
           </Link>
@@ -73,8 +73,8 @@ function TopSortBar() {
             href={"/top/infinity"}
             about="Top"
             className={`px-3 py-2 rounded-md cursor-pointer ${
-              pathName === "/top/infinity" ? `font-bold` : `font-base`
-            }  text-slate-900 hover:text-btnFontColor hover:bg-white`}
+              pathName === "/top/infinity" ? `font-bold hover:bg-white` : `font-base`
+            }  text-slate-900 hover:text-btnFontColor sm:hover:bg-white`}
           >
             Infinity
           </Link>

@@ -15,12 +15,16 @@ const config: Config = {
         buttonHover: "#3A48DF",
         btnFontColor: "#3B49DF",
         hoverAccent: "#E6E7F6",
+        blogCard: "#FEFFFF"
       },
       fontWeight: {
         thin2: "400",
         medium2: "600",
       },
 
+      aspectRatio:{
+        'blogBanner': '1000/400'
+      },
 
       keyframes: {
         "accordion-down": {

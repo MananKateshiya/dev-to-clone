@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import PostLoading from "@/app/(root)/(posts)/loading";
-// import BlogCard from "@/components/cards/BlogCard";
-const BlogCard = React.lazy(() => import("@/components/cards/BlogCard"));
+import BlogCard from "@/components/cards/BlogCard";
+
 
 function page() {
   return (
@@ -11,8 +11,8 @@ function page() {
       
           {/* BLOGS / TODOS Will appear here */}
           <Suspense fallback={<PostLoading />}>
-          <h1>root ="/month"</h1>
-          <BlogCard isLatest={true} limit={10} />
+          
+          <BlogCard/>
       </Suspense>
       </section>
     </section>

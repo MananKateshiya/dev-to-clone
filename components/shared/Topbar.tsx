@@ -2,9 +2,10 @@ import {
   MagnifyingGlassIcon,
   BellIcon,
 } from "@heroicons/react/24/outline";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import Link from "next/link";
 import ToggleButton from "./LeftSidebarMobile";
+import MyAvatar from "../Others/MyAvatar";
 
 
 function Topbar({ src }: { src: StaticImageData }) {
@@ -23,7 +24,7 @@ function Topbar({ src }: { src: StaticImageData }) {
             <input
               className=" py-2 pl-2 pr-12 placeholder-gray-900 placeholder:font-sans border border-gray-300 rounded-md hover:border-gray-400 outline-none focus:ring-2 focus:ring-focusblue focus:border-none focus:shadow-sm focus:ease-in duration-130"
               type="text"
-              size={35}
+              size={45}
               name="Search"
               placeholder="Search..."
             />
@@ -56,16 +57,7 @@ function Topbar({ src }: { src: StaticImageData }) {
             <BellIcon className="h-10 w-10 py-2 " />
           </Link>
 
-          <Link
-            href={"/"}
-            className="group rounded-full focus:focusRing focus:ring-offset-4"
-          >
-            <Image
-              className="flex h-8 w-8 items-center justify-center rounded-full overflow-hidden bg-slate-300 ring-slate-200  hover:ring-4 hover:ring-slate-300 group-focus:ring-2 group-focus:ring-slate-300"
-              src={src}
-              alt="User Profile Pic"
-            />
-          </Link>
+         <MyAvatar src={src} link={'/'} isBorder={true} />
         </div>
       </div>
     </header>

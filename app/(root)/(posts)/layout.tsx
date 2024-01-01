@@ -17,7 +17,7 @@ export default function PostsLayout({
   const loggedIn: boolean = false;
 
   return (
-    <section className="py-2 px-2">
+    <section className="py-2 px-0">
       <div className="flex mx-auto max-w-7xl">
         {/* LEFT */}
         <div className="flex mt-2">
