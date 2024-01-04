@@ -1,3 +1,5 @@
+import { BlogProps, ReactionProps } from "@/components/cards/BlogCard";
+
 type SidebarObj = {
   emoji: string;
   route: string;
@@ -6,6 +8,69 @@ type SidebarObj = {
 type SidebarTagObj = {
   tag: string;
 };
+
+export const posts: BlogProps[] = [
+  {
+    blogId: 'xyz123abc',
+    bannerImg:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+    authorImg:
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+    authorName: "Hung Vu",
+    blogTitle:
+      "Choosing Silver Bracelets: A Full Introduction to Style & Elegance",
+    dateOfPost: new Date(),
+    isBookmark: false,
+    readTime: "2 minutes",
+    timeTillPost: new Date(),
+    tagLinks: [
+      "solverbraceletmen",
+      "silverbraceletformen",
+      "silverchainbraceletmens",
+    ],
+    noComments: 10,
+    reaction_count: 0,
+    reactions: [
+      {
+        reactor_id: "111111",
+        reaction_type: "heart",
+      },
+      {
+        reactor_id: "222222",
+        reaction_type: "smiley",
+      },
+    ],
+  },
+  // {
+  //   bannerImg: "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+  //   authorImg: "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+  //   authorName: 'Hung Vu 2',
+  //   blogTitle: 'Create Dev.to clone with Next.JS, MongoDB, Prisma and Redis',
+  //   // blogTitle: '*NEW* GET PAID $10.00 PER WEEK TO YOUR CASH APP.',
+  //   dateOfPost: new Date(),
+  //   isBookmark: false,
+  //   readTime: '3 minutes',
+  //   timeTillPost: new Date(),
+  //   tagLinks: [ 'learn', 'react', 'programming', 'silverbraceletformen'],
+  //   noComments: 3,
+  //   noReactions: 5
+  // },
+
+  // {
+  //   bannerImg: "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+  //   authorImg: "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+  //   authorName: 'Hung Vu 3',
+  //   blogTitle: '*NEW* GET PAID $10.00 PER WEEK TO YOUR CASH APP.',
+  //   dateOfPost: new Date(),
+  //   isBookmark: true,
+  //   readTime: '5 minutes',
+  //   timeTillPost: new Date(),
+  //   tagLinks: [ 'learn', 'react', 'programming', 'silverbraceletformen'],
+  //   noComments: 2,
+  //   noReactions: 1
+  // },
+];
+
 export const sidebarLinks: SidebarObj[] = [
   {
     emoji: "🏠",

@@ -15,13 +15,24 @@ const config: Config = {
         buttonHover: "#3A48DF",
         btnFontColor: "#3B49DF",
         hoverAccent: "#E6E7F6",
-        blogCard: "#FEFFFF"
+        blogCard: "#FFFFFE",
+        blogLinkColor: "#2F3AB2",
+        tagColor: "#F2F2F3",
+        bookmarkHover: "#E4E5E5",
+        hoverBorderAccent: "#D3D3D3",
+        hoverAccent2:'#F6F6F6'
+
       },
       fontWeight: {
         thin2: "400",
         medium2: "600",
       },
+      fontSize:{
+        postTitleM: '20px',
+        postTitleTop: '30px',
+        postTitleOther: '24px'
 
+      },
       aspectRatio:{
         'blogBanner': '1000/400'
       },

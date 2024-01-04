@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="w-screen overflow-x-clip overflow-y-scroll">
+      <body className="w-full">
         <Topbar src={imgSrc} />
         <main>
           {children}

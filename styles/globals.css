@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: RGB(245, 244, 245);
+  background-color: RGB(245, 245, 245);
 }
 
 @layer components {
@@ -14,7 +14,10 @@ body {
   .focusRing{
     @apply ring-2 ring-offset-2 ring-[#3B49DE] outline-none
   }
-
+/* 
+  .tagBox{
+    @apply 
+  } */
 }
 
 

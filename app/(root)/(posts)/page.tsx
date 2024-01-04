@@ -2,8 +2,8 @@
 import BlogCard from "@/components/cards/BlogCard";
 import { Suspense, lazy } from "react";
 import PostLoading from "./loading";
+import { posts } from "@/constants";
 // (ROOT) -> HOME
-
 
 function Home(): React.ReactElement {
   return (
@@ -11,9 +11,27 @@ function Home(): React.ReactElement {
       {/* MIDDLE */}
       <section className="inline-block mx-0 w-full">
         {/* BLOGS / TODOS Will appear here */}
+
         <Suspense fallback={<PostLoading />}>
-          <BlogCard />
-          <BlogCard/>
+          {posts.map((post, index) => (
+            <div key={index}>
+              <BlogCard
+                blogId={post.blogId}
+                bannerImg={post.bannerImg}
+                authorImg={post.authorImg}
+                authorName={post.authorName}
+                blogTitle={post.blogTitle}
+                dateOfPost={post.dateOfPost}
+                isBookmark={post.isBookmark}
+                readTime={post.readTime}
+                tagLinks={post.tagLinks}
+                timeTillPost={post.timeTillPost}
+                noComments={post.noComments}
+                reaction_count={post.reaction_count}
+                reactions={post?.reactions}
+              />
+            </div>
+          ))}
         </Suspense>
       </section>
     </section>
