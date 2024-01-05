@@ -1,8 +1,6 @@
+import { CardProps } from "@/lib/types";
 import React from "react";
 
-type CardProps = {
-  name: string;
-};
 
 function RightCards({ name }: CardProps) {
   return (

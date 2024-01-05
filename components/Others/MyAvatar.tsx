@@ -1,12 +1,8 @@
-import Image, { StaticImageData } from "next/image";
+import { AvatarType } from "@/lib/types";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type AvatarType = {
-  link: string;
-  src: StaticImageData | string;
-  isBorder?: boolean | false;
-};
 
 function MyAvatar({ link, src, isBorder }: AvatarType) {
   return (

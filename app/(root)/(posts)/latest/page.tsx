@@ -3,29 +3,29 @@ import PostLoading from "../loading";
 import BlogCard from "@/components/cards/BlogCard";
 import { posts } from "@/constants";
 
-
 function page() {
   return (
-    <section className="flex mx-auto">
+    <section>
       {/* MIDDLE */}
-      <section className="inline-block mx-0 md:mr-2 w-full">
-      <Suspense fallback={<PostLoading />}>
-      {posts.map((data, index) => (
-            <div key={index}>
-              <BlogCard
-                bannerImg={data.bannerImg}
-                authorImg={data.authorImg}
-                authorName={data.authorName}
-                blogTitle={data.blogTitle}
-                dateOfPost={data.dateOfPost}
-                isBookmark={data.isBookmark}
-                readTime={data.readTime}
-                tagLinks={data.tagLinks}
-                timeTillPost={data.timeTillPost}
-                noComments={data.noComments}
-                noReactions={data.noReactions}
-              />
-            </div>
+      <section className="inline-block mx-0 w-full">
+        <Suspense fallback={<PostLoading />}>
+          {posts.map((post, index) => (
+            <BlogCard
+              index={index}
+              blogId={post.blogId}
+              bannerImg={post.bannerImg}
+              authorImg={post.authorImg}
+              authorName={post.authorName}
+              blogTitle={post.blogTitle}
+              dateOfPost={post.dateOfPost}
+              isBookmark={post.isBookmark}
+              readTime={post.readTime}
+              tagLinks={post.tagLinks}
+              timeTillPost={post.timeTillPost}
+              noComments={post.noComments}
+              reaction_count={post.reaction_count}
+              reactions={post?.reactions}
+            />
           ))}
         </Suspense>
       </section>

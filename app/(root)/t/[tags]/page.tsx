@@ -1,17 +1,7 @@
 import React, { Suspense } from "react";
 import Loading from "@/app/(root)/loading";
+import { PageParams, TodoType } from "@/lib/types";
 
-type TodoType = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
-type PageParams = {
-  params:{
-    tags: number;
-  }
-};
 
 async function fetchTodos(id: number) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
