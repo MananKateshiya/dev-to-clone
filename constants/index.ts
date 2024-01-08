@@ -1,4 +1,4 @@
-import { BlogProps, SidebarObj, SidebarTagObj } from "@/lib/types";
+import { BlogProps, ReactionType, SidebarObj, SidebarTagObj } from "@/lib/types";
 
 export const posts: BlogProps[] = [
   {
@@ -20,15 +20,15 @@ export const posts: BlogProps[] = [
       "silverchainbraceletmens",
     ],
     noComments: 10,
-    reaction_count: 0,
+    reaction_count: 4,
     reactions: [
       {
         reactor_id: "111111",
-        reaction_type: "heart",
+        reaction_types: [ReactionType.Unicorn], // Use the enum value here
       },
       {
         reactor_id: "222222",
-        reaction_type: "smiley",
+        reaction_types: [ReactionType.RaisingHands], // Use the enum value here
       },
     ],
   },
@@ -46,26 +46,22 @@ export const posts: BlogProps[] = [
     isBookmark: false,
     readTime: "6 min read",
     timeTillPost: new Date(),
-    tagLinks: [
-      "solverbraceletmen",
-      "silverbraceletformen",
-      "silverchainbraceletmens",
-    ],
-    noComments: 10,
-    reaction_count: 0,
+    noComments: 0,
+    reaction_count: 10,
     reactions: [
       {
         reactor_id: "111111",
-        reaction_type: "heart",
+        reaction_types:[ReactionType.Heart, ReactionType.RaisingHands],
       },
       {
         reactor_id: "222222",
-        reaction_type: "smiley",
+        reaction_types: [ReactionType.Unicorn, ReactionType.Fire],
       },
     ],
   },
 
   {
+    blogId:"0012xyz",
     bannerImg:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -80,15 +76,15 @@ export const posts: BlogProps[] = [
     tagLinks: ["learn", "react", "programming", "silverbraceletformen"],
     noComments: 3,
 
-    reaction_count: 0,
+    reaction_count: 1,
     reactions: [
       {
         reactor_id: "111111",
-        reaction_type: "heart",
+        reaction_types: [ReactionType.Heart, ReactionType.RaisingHands],
       },
       {
         reactor_id: "222222",
-        reaction_type: "smiley",
+        reaction_types: [ReactionType.ExplodingHead, ReactionType.RaisingHands, ReactionType.Fire],
       },
     ],
   },

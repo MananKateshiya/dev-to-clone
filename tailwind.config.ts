@@ -20,7 +20,8 @@ const config: Config = {
         tagColor: "#F2F2F3",
         bookmarkHover: "#E4E5E5",
         hoverBorderAccent: "#D3D3D3",
-        hoverAccent2:'#F6F6F6'
+        hoverAccent2:'#F6F6F6',
+        chipsAccent: '#F5F5F4'
 
       },
       fontWeight: {
