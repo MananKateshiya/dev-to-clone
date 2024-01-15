@@ -8,6 +8,7 @@ function Home(): React.ReactElement {
   return (
     <section>
       {/* MIDDLE */}
+
       <section className="inline-block mx-0 w-full">
         {/* BLOGS / TODOS Will appear here */}
 

@@ -1,14 +1,12 @@
-import {
-  MagnifyingGlassIcon,
-  BellIcon,
-} from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, BellIcon } from "@heroicons/react/24/outline";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
 import ToggleButton from "./LeftSidebarMobile";
 import MyAvatar from "../Others/MyAvatar";
 
 
-function Topbar({ src }: { src: StaticImageData | string}) {
+ function Topbar({ src }: { src: StaticImageData | string }) {
+
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
@@ -57,7 +55,7 @@ function Topbar({ src }: { src: StaticImageData | string}) {
             <BellIcon className="h-10 w-10 py-2 " />
           </Link>
 
-         <MyAvatar src={src} link={'/'} isBorder={true} />
+          <MyAvatar src={src} link={"/"} isBorder={true} />
         </div>
       </div>
     </header>

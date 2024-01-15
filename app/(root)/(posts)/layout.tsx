@@ -41,9 +41,7 @@ export default function PostsLayout({
             )}
           </div>
 
-          
-            {children}
-          
+          {children}
         </section>
 
         {/* RIGHT */}

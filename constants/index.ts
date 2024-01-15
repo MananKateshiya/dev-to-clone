@@ -67,7 +67,7 @@ export const posts: BlogProps[] = [
     authorImg:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
     authorName: "Hung Vu 2",
-    blogTitle: "Create Dev.to clone with Next.JS, MongoDB, Prisma and Redis",
+    blogTitle: "Create Dev.to clone with Next.JS, MongoDB and Redis",
     // blogTitle: '*NEW* GET PAID $10.00 PER WEEK TO YOUR CASH APP.',
     dateOfPost: new Date(),
     isBookmark: false,

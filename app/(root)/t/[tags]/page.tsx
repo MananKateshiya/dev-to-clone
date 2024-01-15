@@ -5,13 +5,14 @@ import { PageParams, TodoType } from "@/lib/types";
 
 async function fetchTodos(id: number) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+  
   const todo: TodoType = await res.json();
   return todo;
 }
 
 async function TodoPage( {params:{ tags }} : PageParams) {
+
   
- 
   const td = await fetchTodos(tags);
 
   return (
@@ -28,9 +29,3 @@ async function TodoPage( {params:{ tags }} : PageParams) {
 }
 
 export default TodoPage;
-
-// export async function wait(ms: number) {
-//   return new Promise((resolve) => {
-//     setTimeout(resolve, ms);
-//   });
-// }
