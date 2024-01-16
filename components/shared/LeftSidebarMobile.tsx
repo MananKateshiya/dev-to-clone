@@ -13,7 +13,7 @@ function ToggleButton(): React.ReactElement {
 
   return (
     <>
-    {/* Topbar Hamburgur Button */}
+      {/* Topbar Hamburgur Button */}
       <button
         onClick={handleToggle}
         className="flex md:hidden rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
@@ -21,10 +21,10 @@ function ToggleButton(): React.ReactElement {
         <Bars3Icon className="h-10 w-10 p-1" />
       </button>
 
-    {/* Left Side bar Mobile Render if isToggle == True */}
+      {/* Left Side bar Mobile Render if isToggle == True */}
 
       {isToggle && (
-        <section className="flex flex-col max-w-1/2 h-[100vh] absolute top-0 bottom-0 left-0 bg-white px-2 md:hidden">
+        <section className="flex flex-col max-w-1/2 h-[100vh] absolute top-0 bottom-0 left-0 z-50 bg-white px-2 md:hidden">
           <div className="flex items-center justify-between p-2">
             <h1 className="font-extrabold text-color_dark">DEV Community</h1>
 
@@ -32,8 +32,6 @@ function ToggleButton(): React.ReactElement {
               <XMarkIcon className="p-2 h-10 w-10 rounded-md hover:bg-hoverAccent focus:focusRing hover:fill-blue-900 focus:fill-blue-900" />
             </button>
           </div>
-
-          
 
           <nav className="flex flex-col text-color_dark w-full font-thin2 md:hidden px-2 py-1.5">
             {sidebarLinks.map((link) => (

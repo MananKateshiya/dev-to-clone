@@ -4,9 +4,7 @@ import Link from "next/link";
 import ToggleButton from "./LeftSidebarMobile";
 import MyAvatar from "../Others/MyAvatar";
 
-
- function Topbar({ src }: { src: StaticImageData | string }) {
-
+function Topbar({ src }: { src: StaticImageData | string }) {
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
@@ -39,7 +37,7 @@ import MyAvatar from "../Others/MyAvatar";
         {/*  Right  */}
         <div className="inline-flex items-center gap-x-3 pr-6">
           <button className="hidden px-4 py-2 border font-btnFont font-medium  focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
-            Create Post
+            <Link href={"/enter/signin"}>Create Post</Link>
           </button>
           <Link
             href={"/"}
