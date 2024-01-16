@@ -1,5 +1,5 @@
-"use client"
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
 
 const Signup = () => {
   return (
@@ -8,7 +8,10 @@ const Signup = () => {
         <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
         <form>
           <div className="mb-4">
-            <label htmlFor="username" className="block text-gray-700 text-sm font-semibold mb-2">
+            <label
+              htmlFor="username"
+              className="block text-gray-700 text-sm font-semibold mb-2"
+            >
               Username
             </label>
             <input
@@ -19,7 +22,10 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-semibold mb-2">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 text-sm font-semibold mb-2"
+            >
               Email
             </label>
             <input
@@ -30,7 +36,10 @@ const Signup = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-semibold mb-2">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 text-sm font-semibold mb-2"
+            >
               Password
             </label>
             <input
@@ -48,8 +57,8 @@ const Signup = () => {
           </button>
         </form>
         <p className="mt-4 text-gray-600">
-          Already have an account?{' '}
-          <Link href="/enter/signin" className='text-blue-500'>
+          {"Already have an account? "}
+          <Link href="/enter/signin" className="text-blue-500">
             Login
           </Link>
         </p>

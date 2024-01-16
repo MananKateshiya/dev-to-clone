@@ -48,7 +48,7 @@ const Signin = () => {
           </button>
         </form>
         <p className="mt-4 text-gray-600">
-          Don't have an account?{' '}
+          {"Don't have an account? "}
           <Link href="/enter/signup"className='text-blue-500'>
             Signup
           </Link>
