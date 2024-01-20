@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Signin = () => {
   const router = useRouter();
+  const [isLoading, setLoading] = useState(false);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -12,8 +13,32 @@ const Signin = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    
+    try {
+      setLoading(true);
+      const res = await fetch("/api/users/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      console.log("login response: ", res);
+      if (res.status === 200) {
+        router.push("/");
+      }
+    } catch (error: any) {
+      console.log({ "Login failed": error.message });
+    } finally {
+      setLoading(false);
+    }
   };
+  useEffect(() => {
+    if (user.email.length > 0 && user.password.length > 0) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+    }
+  }, [user]);
 
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -64,7 +89,10 @@ const Signin = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+            className={`bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ${
+              isLoading && "disabled:bg-slate-400 cursor-not-allowed"
+            }`}
+            disabled={isLoading}
           >
             Login
           </button>

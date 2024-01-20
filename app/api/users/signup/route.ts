@@ -5,17 +5,9 @@ import bcryptjs from "bcryptjs";
 
 //initial connection with the DB
 connect();
-export async function GET(){
-  try{
-  Response.json({message: "Working"},{status: 200})
-  }catch(err:any){
-    Response.json({error: err.message}, {status: 500})
-  }
-}
 export async function POST(request: NextRequest) {
   try {
-    const reqBody = await request.json();
-    const { username, email, password } = reqBody;
+    const { username, email, password } = await request.json();
 
     //Checking if the user exists in the database
     const user = await User.findOne({ email });
@@ -36,6 +28,7 @@ export async function POST(request: NextRequest) {
       password: hashedPassword,
     });
 
+    //storing on a variable, just in case for debugging on server
     const savedUser = await newUser.save();
 
     return NextResponse.json(

@@ -24,12 +24,12 @@ const Signup = () => {
         body: JSON.stringify(user),
       });
 
-      console.log("login response: ", res);
+      console.log("signup response: ", res);
       if (res.status === 201) {
-        router.push("/");
+        router.push("/enter");
       }
     } catch (error: any) {
-      console.log({ error: error.message });
+      console.log({ "Signup failed": error.message });
     } finally {
       setLoading(false);
     }
