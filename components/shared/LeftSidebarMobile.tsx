@@ -24,10 +24,9 @@ function ToggleButton(): React.ReactElement {
       {/* Left Side bar Mobile Render if isToggle == True */}
 
       {isToggle && (
-        <section className="flex flex-col max-w-1/2 h-[100vh] absolute top-0 bottom-0 left-0 z-50 bg-white px-2 md:hidden">
+        <section className="flex flex-col max-w-1/2 h-screen absolute top-0 bottom-0 left-0 z-50 bg-white px-2 md:hidden">
           <div className="flex items-center justify-between p-2">
             <h1 className="font-extrabold text-color_dark">DEV Community</h1>
-
             <button onClick={handleToggle}>
               <XMarkIcon className="p-2 h-10 w-10 rounded-md hover:bg-hoverAccent focus:focusRing hover:fill-blue-900 focus:fill-blue-900" />
             </button>
