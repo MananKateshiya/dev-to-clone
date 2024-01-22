@@ -1,10 +1,23 @@
 import { MagnifyingGlassIcon, BellIcon } from "@heroicons/react/24/outline";
-import { StaticImageData } from "next/image";
 import Link from "next/link";
 import ToggleButton from "./LeftSidebarMobile";
 import MyAvatar from "../Others/MyAvatar";
+import imgSrc from "@/assets/user.png";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import ProfileModal from "../ui/ProfileModal";
 
-function Topbar({ src }: { src: StaticImageData | string }) {
+function Topbar() {
+  // const logout = async() =>{
+  //   const res = await fetch('/api/users/logout');
+  //   if(res.status === 200){
+  //     router.push('/enter');
+  //   }
+  // }
+
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
@@ -45,7 +58,6 @@ function Topbar({ src }: { src: StaticImageData | string }) {
           >
             <MagnifyingGlassIcon />
           </Link>
-
           <Link
             href={"/"}
             className="rounded-md focus:focusRing focus:bg-hoverAccent focus:text-blue-900 hover:bg-hoverAccent hover:text-blue-900"
@@ -53,7 +65,23 @@ function Topbar({ src }: { src: StaticImageData | string }) {
             <BellIcon className="h-10 w-10 py-2 " />
           </Link>
 
-          <MyAvatar src={src} link={"/"} isBorder={true} />
+          <ProfileModal className="">
+            <MyAvatar src={imgSrc} link={"/"} isBorder={true} />
+            
+          </ProfileModal>
+          {/* <Popover> */}
+          {/* <PopoverTrigger className="group bg-white" asChild>
+              <MyAvatar src={imgSrc} link={"/"} isBorder={true} />
+            </PopoverTrigger>
+            <PopoverContent className="flex flex-col bg-white hover:underline px-2 w-screen sm:w-auto">
+              <button>
+                Sign out
+              </button>
+              <span>hello</span>
+              <span>ok</span>
+              <span>down</span>
+            </PopoverContent>
+          </Popover> */}
         </div>
       </div>
     </header>

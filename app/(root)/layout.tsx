@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-full">
-        <Topbar src={imgSrc} />
+        <Topbar />
         <main>
           {children}
         </main>
