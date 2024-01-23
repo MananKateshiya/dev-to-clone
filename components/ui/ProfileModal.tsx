@@ -7,7 +7,7 @@ function ProfileModal({
   className,
 }: {
   children: React.ReactElement;
-  className: string;
+  className?: string;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
@@ -27,7 +27,7 @@ function ProfileModal({
   }, []);
   return (
     <div
-      className={className}
+      className={`${className}`}
       onClick={() => setIsModalOpen((prev) => !prev)}
       ref={cardRef}
     >

@@ -8,9 +8,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import ProfileModal from "../ui/ProfileModal";
 
 function Topbar() {
+
   // const logout = async() =>{
   //   const res = await fetch('/api/users/logout');
   //   if(res.status === 200){
@@ -48,7 +48,7 @@ function Topbar() {
         </div>
 
         {/*  Right  */}
-        <div className="inline-flex items-center gap-x-3 pr-6">
+        <div className="inline-flex items-center gap-x-3 pr-5">
           <button className="hidden px-4 py-2 border font-btnFont font-medium  focus:focusRing focus:bg-buttonHover focus:text-white  text-btnFontColor border-focusblue hover:bg-buttonHover hover:text-white focus:underline hover:underline  rounded-md md:inline-flex">
             <Link href={"/enter"}>Create Post</Link>
           </button>
@@ -65,23 +65,55 @@ function Topbar() {
             <BellIcon className="h-10 w-10 py-2 " />
           </Link>
 
-          <ProfileModal className="">
-            <MyAvatar src={imgSrc} link={"/"} isBorder={true} />
-            
-          </ProfileModal>
-          {/* <Popover> */}
-          {/* <PopoverTrigger className="group bg-white" asChild>
+        
+          <Popover>
+            <PopoverTrigger className="bg-white" asChild>
               <MyAvatar src={imgSrc} link={"/"} isBorder={true} />
             </PopoverTrigger>
-            <PopoverContent className="flex flex-col bg-white hover:underline px-2 w-screen sm:w-auto">
-              <button>
-                Sign out
-              </button>
-              <span>hello</span>
-              <span>ok</span>
-              <span>down</span>
+            <PopoverContent className="flex flex-col bg-white items-start px-2 py-1.5 rounded-md w-[250px] max-sm:w-[94vw] max-sm:mx-2">
+            <Link
+                href="/Profile"
+                passHref
+                className="flex flex-col px-4 w-full p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
+              >
+                <span className="text-text_dark font-medium">MananKateshiya</span>
+                <small className="text-text_light opacity-75 font-normal text-sm">@manankateshiya</small>
+              </Link>
+              <hr className="my-2 border-1 border-slate-300 w-full" />
+              <Link
+                href="/dashboard"
+                passHref
+                className="w-full px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
+              >
+                Dashboard
+              </Link>
+              <Link
+                href="/create-post"
+                passHref
+                className="w-full px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
+              >
+                Create Post
+              </Link>
+              <Link
+                href="/reading-list"
+                passHref
+                className="w-full px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
+              >
+                Reading List
+              </Link>
+              <Link
+                href="/settings"
+                passHref
+                className="w-full px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
+              >
+                Settings
+              </Link>
+              <hr className="my-2 border-1 border-slate-300 w-full" />
+              <Link href="/api/users/logout" className="w-full text-start px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md">
+                Sign Out
+              </Link>
             </PopoverContent>
-          </Popover> */}
+          </Popover>
         </div>
       </div>
     </header>
