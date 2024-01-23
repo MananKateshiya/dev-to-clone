@@ -1,23 +1,15 @@
 import { MagnifyingGlassIcon, BellIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import ToggleButton from "./LeftSidebarMobile";
-import MyAvatar from "../Others/MyAvatar";
-import imgSrc from "@/assets/user.png";
+import SignoutButton from "../Others/SignoutButton";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
+import MyAvatar from "@/components/Others/MyAvatar";
+import imgSrc from "@/assets/user.png";
 function Topbar() {
-
-  // const logout = async() =>{
-  //   const res = await fetch('/api/users/logout');
-  //   if(res.status === 200){
-  //     router.push('/enter');
-  //   }
-  // }
-
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
@@ -65,19 +57,22 @@ function Topbar() {
             <BellIcon className="h-10 w-10 py-2 " />
           </Link>
 
-        
           <Popover>
             <PopoverTrigger className="bg-white" asChild>
               <MyAvatar src={imgSrc} link={"/"} isBorder={true} />
             </PopoverTrigger>
             <PopoverContent className="flex flex-col bg-white items-start px-2 py-1.5 rounded-md w-[250px] max-sm:w-[94vw] max-sm:mx-2">
-            <Link
+              <Link
                 href="/Profile"
                 passHref
                 className="flex flex-col px-4 w-full p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md"
               >
-                <span className="text-text_dark font-medium">MananKateshiya</span>
-                <small className="text-text_light opacity-75 font-normal text-sm">@manankateshiya</small>
+                <span className="text-text_dark font-medium">
+                  MananKateshiya
+                </span>
+                <small className="text-text_light opacity-75 font-normal text-sm">
+                  @manankateshiya
+                </small>
               </Link>
               <hr className="my-2 border-1 border-slate-300 w-full" />
               <Link
@@ -109,9 +104,10 @@ function Topbar() {
                 Settings
               </Link>
               <hr className="my-2 border-1 border-slate-300 w-full" />
-              <Link href="/api/users/logout" className="w-full text-start px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md">
-                Sign Out
-              </Link>
+
+              <div className="group w-full text-start px-4 p-2 hover:underline hover:text-btnFontColor hover:bg-hoverAccentText rounded-md">
+                <SignoutButton />
+              </div>
             </PopoverContent>
           </Popover>
         </div>
