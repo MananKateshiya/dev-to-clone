@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/popover";
 import MyAvatar from "@/components/Others/MyAvatar";
 import imgSrc from "@/assets/user.png";
+import devLogo from "@/assets/dev-logo.png";
+import Image from "next/image";
 function Topbar() {
   return (
     <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
@@ -17,9 +19,16 @@ function Topbar() {
         <div className="inline-flex items-center gap-x-2 md:gap-x-4">
           <ToggleButton />
           <Link href={"/"} className="focus:focusRing">
-            <div className="w-[46px] h-[36px] rounded-[4px] shrink-0 py-1  font-logo text-lg text-white text-center bg-black select-none">
+            <Image
+              className="h-10 w-full"
+              src={devLogo}
+              alt="Dev logo"
+              objectFit="true"
+              style={{ objectFit: "contain" }}
+            />
+            {/* <div className="w-[46px] h-[36px] rounded-[4px] shrink-0 py-1  font-logo text-lg text-white text-center bg-black select-none">
               DEV
-            </div>
+            </div> */}
           </Link>
           <div className="items-center relative md:flex hidden">
             <input

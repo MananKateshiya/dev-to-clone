@@ -12,11 +12,22 @@ export function middleware(request: NextRequest) {
   if (!isPublicPath && !token) {
     return NextResponse.redirect(new URL("/enter", request.nextUrl));
   }
+  if (path.includes("/api") && !token) {
+    return NextResponse.redirect(new URL("/enter", request.nextUrl));
+  }
+  if (path.includes("/logout") && !token) {
+    return NextResponse.redirect(new URL("/enter", request.nextUrl));
+  }
 }
 
 export const config = {
   matcher: [
     "/",
+    "/latest",
+    "/t/:path*",
+    "/top/:path*",
     "/enter/:path*",
+    "/api/:path?",
+    "/api/users/logout",
   ],
 };

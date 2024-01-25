@@ -24,7 +24,7 @@ const Signup = () => {
         body: JSON.stringify(user),
       });
 
-      console.log("signup response: ", res);
+      // console.log("signup response: ", res);
       if (res.status === 201) {
         router.push("/enter");
       }

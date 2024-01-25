@@ -7,8 +7,10 @@ export async function GET() {
       { status: 200 }
     );
     res.cookies.set("token", "", { httpOnly: true, expires: new Date(0) });
-    
-    return res;
+
+    if (res.ok) {
+      return res;
+    }
   } catch (error: any) {
     console.log({ error: error.message });
   }

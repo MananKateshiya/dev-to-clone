@@ -35,4 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 #testing files
-test*.txt
+test.txt
+test2.txt

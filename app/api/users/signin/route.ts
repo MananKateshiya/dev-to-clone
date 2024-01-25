@@ -32,6 +32,7 @@ export async function POST(request: NextRequest) {
       id: userObject._id,
       username: userObject.username,
       email: userObject.email,
+      role: userObject.role
     };
 
     //create a token

@@ -22,7 +22,7 @@ const Signin = () => {
         },
         body: JSON.stringify(user),
       });
-      console.log("login response: ", res);
+      // console.log("login response: ", res);
       if (res.status === 200) {
         router.push("/");
       }

@@ -4,12 +4,14 @@ import React from "react";
 
 function SignoutButton() {
   const router = useRouter();
+
   const handleLogout = async () => {
     const res = await fetch("/api/users/logout");
-    if (res.status === 200) {
-      router.push("/enter");
+    if (res.ok) {
+    router.push('/enter')
     }
   };
+
   return (
     <div>
       <button onClick={handleLogout} className="group-hover:underline">
