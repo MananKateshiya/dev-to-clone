@@ -289,7 +289,7 @@ function LeftSidebar() {
           {sidebarTags.map((tags) => (
             <Link
               key={tags.tag}
-              href={`t/${tags.tag}`}
+              href={`/t/${tags.tag}`}
               className=" flex items-center px-2.5 py-1.5 bg-transparent focus:focusRing focus:bg-hoverAccent hover:bg-hoverAccent hover:text-blue-900 hover:underline focus:underline rounded-md"
             >
               <span className="text-md py-0.5 focus:focusRing focus:bg-hoverAccent ">

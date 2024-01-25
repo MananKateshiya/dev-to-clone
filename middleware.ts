@@ -18,6 +18,5 @@ export const config = {
   matcher: [
     "/",
     "/enter/:path*",
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
