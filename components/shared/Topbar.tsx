@@ -23,8 +23,9 @@ function Topbar() {
               className="h-10 w-full"
               src={devLogo}
               alt="Dev logo"
-              objectFit="true"
-              style={{ objectFit: "contain" }}
+              objectFit="contain"
+      
+              
             />
             {/* <div className="w-[46px] h-[36px] rounded-[4px] shrink-0 py-1  font-logo text-lg text-white text-center bg-black select-none">
               DEV
