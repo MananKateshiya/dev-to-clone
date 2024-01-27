@@ -8,19 +8,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  state,
-  user,
 }: {
   children: React.ReactNode;
-  state: string;
-  user: string;
+  
 }) {
   return (
     <html lang="en">
       <body className="w-full">
         <main>
           <section className="p-2 bg-amber-400 items-center">
-            <h1 className="text-4xl text-center">Landing Page</h1>
+            <h1 className="text-4xl text-center">{`Landing Page`}</h1>
           </section>
           {children}
         </main>

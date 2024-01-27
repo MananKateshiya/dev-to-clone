@@ -20,10 +20,10 @@ function Topbar() {
           <ToggleButton />
           <Link href={"/"} className="focus:focusRing">
             <Image
-              className="h-10 w-full"
+              className="h-10 w-full bg-contain"
               src={devLogo}
               alt="Dev logo"
-              objectFit="contain"
+              
       
               
             />

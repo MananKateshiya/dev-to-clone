@@ -17,12 +17,12 @@ function BlogCard(props: BlogProps) {
       {/* Banner/Header Image */}
       {isFirstCard(props.index) && (
         <Image
-          className="w-full aspect-blogBanner"
+          className="w-full aspect-blogBanner bg-cover"
           src={props.bannerImg || ""}
           alt="Banner Image"
           width={1000}
           height={400}
-          objectFit="cover"
+          
           
         />
       )}
