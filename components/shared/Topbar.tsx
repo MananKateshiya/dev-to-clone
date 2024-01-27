@@ -13,7 +13,7 @@ import devLogo from "@/assets/dev-logo.png";
 import Image from "next/image";
 function Topbar() {
   return (
-    <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm">
+    <header className="py-2 px-2 md:px-4 bg-white top-0 z-30 w-full shadow-sm max-sm:sticky max-sm:shadow-md">
       <div className="flex items-center justify-between bg-white mx-auto max-w-7xl">
         {/* Left */}
         <div className="inline-flex items-center gap-x-2 md:gap-x-4">
