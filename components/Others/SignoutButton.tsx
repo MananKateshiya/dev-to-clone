@@ -14,7 +14,7 @@ function SignoutButton() {
 
   return (
     <div>
-      <button onClick={handleLogout} className="group-hover:underline">
+      <button onClick={handleLogout} className="text-start group-hover:underline w-full">
         Sign Out
       </button>
     </div>

@@ -2,6 +2,7 @@ import { connect } from "@/dbConfig/dbConfig";
 import User from "@/models/UserModel";
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
+import { Document } from "mongoose";
 
 //initial connection with the DB
 connect();
@@ -22,7 +23,7 @@ export async function POST(request: NextRequest) {
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(password, salt);
 
-    const newUser = new User({
+    const newUser: Document = new User({
       username,
       email,
       password: hashedPassword,

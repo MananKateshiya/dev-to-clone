@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const Signin = () => {
   const router = useRouter();
   const [isLoading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -22,9 +23,12 @@ const Signin = () => {
         },
         body: JSON.stringify(user),
       });
-      // console.log("login response: ", res);
+      
       if (res.status === 200) {
         router.push("/");
+      } else {
+        const errorMessage = await res.json();
+        setErrorMessage(errorMessage.message || JSON.stringify(errorMessage));
       }
     } catch (error: any) {
       console.log({ "Login failed": error.message });
@@ -87,6 +91,7 @@ const Signin = () => {
               }
             />
           </div>
+          <span className="flex p-1 text-red-500 font-semibold">{errorMessage}</span>
           <button
             type="submit"
             className={`bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ${

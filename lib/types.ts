@@ -25,7 +25,7 @@ export type BlogProps = {
   bannerImg?: string;
   authorImg: string | StaticImageData;
   authorName: string;
-  dateOfPost: Date;
+  dateOfPost?: Date;
   timeTillPost: Date | string;
   blogTitle: string;
   tagLinks?: string[];

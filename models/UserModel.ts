@@ -1,5 +1,19 @@
-import mongoose from "mongoose";
+import mongoose, { Document } from 'mongoose';
 
+// Define an interface for a user document
+interface UserDocument extends Document {
+  username: string;
+  email: string;
+  password: string;
+  isVerified: boolean;
+  role: string;
+  forgotPasswordToken?: string;
+  forgotPasswordTokenExpiry?: Date;
+  verifyToken?: string;
+  verifyTokenExpiry?: Date;
+}
+
+// Define a Mongoose schema based on the interface
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -8,27 +22,28 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true, "Please provide a email"],
+    required: [true, "Please provide an email"],
     unique: true,
   },
   password: {
     type: String,
     required: [true, "Please provide a password"],
   },
-  isVerified:{
+  isVerified: {
     type: Boolean,
-    default: false
+    default: false,
   },
-  role:{
+  role: {
     type: String,
-    default: "guest"
+    default: "guest",
   },
   forgotPasswordToken: String,
   forgotPasswordTokenExpiry: Date,
   verifyToken: String,
-  verifyTokenExpiry: Date
+  verifyTokenExpiry: Date,
 });
 
-const User = mongoose.models.users || mongoose.model("users", userSchema);
+// Define and export the User model
+const User = mongoose.models.users || mongoose.model<UserDocument>('users', userSchema);
 
 export default User;

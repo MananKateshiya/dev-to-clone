@@ -7,13 +7,19 @@ import jwt from "jsonwebtoken";
 // initial connection witht the DB
 connect();
 
+type TokenData = {
+  id: string;
+  username: string;
+  email: string;
+  role: string;
+};
+
 export async function POST(request: NextRequest) {
   try {
     //GET data from the client
     const { email, password } = await request.json();
     const userObject = await User.findOne({ email });
 
-    
     //check if the user exist
     if (!userObject) {
       return NextResponse.json({ message: "User not found" }, { status: 400 });
@@ -27,12 +33,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
     //get the token data
-    const tokenData = {
+    const tokenData: TokenData = {
       id: userObject._id,
       username: userObject.username,
       email: userObject.email,
-      role: userObject.role
+      role: userObject.role,
     };
 
     //create a token
@@ -48,7 +55,7 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
     response.cookies.set("token", token, { httpOnly: true });
-    
+
     return response;
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });

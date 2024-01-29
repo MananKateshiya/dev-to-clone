@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const Signup = () => {
   const router = useRouter();
   const [isLoading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -27,6 +28,9 @@ const Signup = () => {
       // console.log("signup response: ", res);
       if (res.status === 201) {
         router.push("/enter");
+      } else {
+        const errorMessage = await res.json();
+        setErrorMessage(errorMessage.message || JSON.stringify(errorMessage));
       }
     } catch (error: any) {
       console.log({ "Signup failed": error.message });
@@ -114,6 +118,7 @@ const Signup = () => {
               }
             />
           </div>
+          <span className="flex p-1 text-red-500 font-semibold">{errorMessage}</span>
           <button
             type="submit"
             className={` bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ${

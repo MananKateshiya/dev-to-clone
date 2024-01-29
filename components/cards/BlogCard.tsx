@@ -22,8 +22,6 @@ function BlogCard(props: BlogProps) {
           alt="Banner Image"
           width={1000}
           height={400}
-          
-          
         />
       )}
 
