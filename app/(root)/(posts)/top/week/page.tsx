@@ -13,10 +13,10 @@ function page() {
           <Suspense fallback={<PostLoading />}>
           
           {posts.map((post, index) => (
-            <div key={post.blogId}>
+            <div key={index}>
               <BlogCard
                 index={index}
-                blogId={post.blogId}
+                
                 bannerImg={post.bannerImg}
                 authorImg={post.authorImg}
                 authorName={post.authorName}

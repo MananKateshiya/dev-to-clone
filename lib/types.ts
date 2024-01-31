@@ -21,7 +21,6 @@ export type AvatarType = {
 
 export type BlogProps = {
   index?: any;
-  blogId?: string;
   bannerImg?: string;
   authorImg: string | StaticImageData;
   authorName: string;

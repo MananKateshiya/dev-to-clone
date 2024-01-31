@@ -2,10 +2,11 @@ import mongoose from "mongoose";
 import { ReactionType, BlogProps } from "@/lib/types";
 
 const reactionSchema = new mongoose.Schema({
-  reactor_id: { type: String, required: true },
+  reactor_id:  {type: mongoose.Types.ObjectId, ref: 'User', required: true} ,
   reaction_types: {
     type: String,
     enum: Object.values(ReactionType),
+    
     required: false,
   },
 });
@@ -42,5 +43,6 @@ const blogCardSchema = new mongoose.Schema({
 });
 
 const BlogPostCard = mongoose.models.blogposts || mongoose.model("blogposts", blogCardSchema);
+const Reaction = mongoose.models.reactionSchema || mongoose.model("reactions", reactionSchema);
 
 export default BlogPostCard;
