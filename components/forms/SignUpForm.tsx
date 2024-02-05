@@ -5,18 +5,22 @@ import { useEffect, useState } from "react";
 
 const Signup = () => {
   const router = useRouter();
+
   const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState({
+    name: "",
     username: "",
     email: "",
     password: "",
   });
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     try {
       setLoading(true);
+
       const res = await fetch("/api/users/signup", {
         method: "POST",
         headers: {
@@ -57,10 +61,45 @@ const Signup = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
+              htmlFor="profilePic"
+              className="block text-gray-700 text-md font-semibold mb-2"
+            >
+              Profile image
+            </label>
+            <input
+              type="file"
+              id="profilePic"
+              name="profilePic"
+              accept="image/*"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 text-sm font-semibold mb-2"
+            >
+              Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="w-full px-3 py-2 border rounded-md"
+              value={user.name}
+              onChange={(e) =>
+                setUser({
+                  ...user,
+                  name: e.target.value,
+                })
+              }
+            />
+          </div>
+          <div className="mb-4">
+            <label
               htmlFor="username"
               className="block text-gray-700 text-sm font-semibold mb-2"
             >
-              Username
+              Username *
             </label>
             <input
               type="text"
@@ -118,7 +157,9 @@ const Signup = () => {
               }
             />
           </div>
-          <span className="flex p-1 text-red-500 font-semibold">{errorMessage}</span>
+          <span className="flex p-1 text-red-500 font-semibold">
+            {errorMessage}
+          </span>
           <button
             type="submit"
             className={` bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ${

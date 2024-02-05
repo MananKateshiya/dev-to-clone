@@ -6,7 +6,6 @@ const reactionSchema = new mongoose.Schema({
   reaction_types: {
     type: String,
     enum: Object.values(ReactionType),
-    
     required: false,
   },
 });

@@ -8,7 +8,7 @@ import { Document } from "mongoose";
 connect();
 export async function POST(request: NextRequest) {
   try {
-    const { username, email, password } = await request.json();
+    const { name, username, email, password } = await request.json();
 
     //Checking if the user exists in the database
     const user = await User.findOne({ email });
@@ -24,6 +24,7 @@ export async function POST(request: NextRequest) {
     const hashedPassword = await bcryptjs.hash(password, salt);
 
     const newUser: Document = new User({
+      name,
       username,
       email,
       password: hashedPassword,
