@@ -2,7 +2,7 @@ import { BlogProps, ReactionType, SidebarObj, SidebarTagObj } from "@/lib/types"
 
 export const posts: BlogProps[] = [
   {
-    blogId: "xyz123abc",
+    
     bannerImg:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -13,7 +13,7 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "6 min read",
-    timeTillPost: new Date(),
+    
     tagLinks: [
       "solverbraceletmen",
       "silverbraceletformen",
@@ -34,7 +34,7 @@ export const posts: BlogProps[] = [
   },
 
   {
-    blogId: "xyz123pqr",
+    
     bannerImg:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -45,7 +45,7 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "6 min read",
-    timeTillPost: new Date(),
+    
     noComments: 0,
     reaction_count: 10,
     reactions: [
@@ -61,7 +61,7 @@ export const posts: BlogProps[] = [
   },
 
   {
-    blogId:"0012xyz",
+    
     bannerImg:
       "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -72,7 +72,7 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "3 minutes",
-    timeTillPost: new Date(),
+    
     tagLinks: ["learn", "react", "programming", "silverbraceletformen"],
     noComments: 3,
 

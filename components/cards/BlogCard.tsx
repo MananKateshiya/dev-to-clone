@@ -9,8 +9,8 @@ import { BlogProps } from "@/lib/types";
 import ReactionChips from "../Others/ReactionChips";
 
 function BlogCard(props: BlogProps) {
-  const formattedDateWithYear = format(props.dateOfPost, "MMM d ''yy");
-  const formattedDateWithoutYear = format(props.dateOfPost, "MMM d");
+  const formattedDateWithYear = format(`${props.dateOfPost}`, "MMM d ''yy");
+  const formattedDateWithoutYear = format(`${props.dateOfPost}`, "MMM d");
   
   return (
     <div className="blog-card mb-2 pb-2 min-h-[181px] bg-blogCard rounded-md shadow-sm cursor-pointer">
@@ -47,7 +47,7 @@ function BlogCard(props: BlogProps) {
               {/* Time Till Post */}
               {shouldDisplayYearOrTime(props.dateOfPost) && (
                 <span>
-                  {`(${formatDistanceToNow(props.dateOfPost, {
+                  {`(${formatDistanceToNow(`${props.dateOfPost}`, {
                     addSuffix: true,
                   }).replace("minutes", "mins")})`}
                 </span>

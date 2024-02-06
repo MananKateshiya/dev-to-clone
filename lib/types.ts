@@ -25,14 +25,13 @@ export type BlogProps = {
   authorImg: string | StaticImageData;
   authorName: string;
   dateOfPost?: Date;
-  timeTillPost: Date | string;
   blogTitle: string;
   tagLinks?: string[];
   noComments?: number;
   readTime: string;
   isBookmark: boolean;
   reaction_count?: number;
-  reactions?: ReactionProps[]; // Make reactions optional
+  reactions?: ReactionProps[];
 };
 
 export type TodoType = {

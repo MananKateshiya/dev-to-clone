@@ -13,7 +13,6 @@ function page() {
             <div key={index}>
               <BlogCard
                 index={index}
-                
                 bannerImg={post.bannerImg}
                 authorImg={post.authorImg}
                 authorName={post.authorName}
@@ -22,7 +21,6 @@ function page() {
                 isBookmark={post.isBookmark}
                 readTime={post.readTime}
                 tagLinks={post.tagLinks}
-                timeTillPost={post.timeTillPost}
                 noComments={post.noComments}
                 reaction_count={post.reaction_count}
                 reactions={post?.reactions}
