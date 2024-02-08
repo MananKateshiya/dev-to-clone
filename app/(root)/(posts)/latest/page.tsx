@@ -1,15 +1,29 @@
 import React, { Suspense } from "react";
 import PostLoading from "../loading";
 import BlogCard from "@/components/cards/BlogCard";
-import { posts } from "@/constants";
 
-function page() {
+async function fetchPosts() {
+  try {
+    const postsRes = await fetch("http://localhost:3000/api/blogs/posts", {
+      next: {revalidate: 120}
+    });
+    const posts = await postsRes.json();
+
+    return posts;
+  } catch (error: any) {
+    console.log({ error: error.message });
+  }
+}
+
+async function page() {
+  const posts = await fetchPosts();
+
   return (
     <section>
       {/* MIDDLE */}
       <section className="inline-block mx-0 w-full">
         <Suspense fallback={<PostLoading />}>
-          {posts.map((post, index) => (
+          {posts?.blogs.map((post: any, index: number) => (
             <div key={index}>
               <BlogCard
                 index={index}
