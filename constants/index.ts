@@ -4,9 +4,9 @@ export const posts: BlogProps[] = [
   {
     
     bannerImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
     authorName: "Hung Vu",
     blogTitle:
       "Insights from LRO Investment Advisor Limited’s Chief Financial Analyst",
@@ -36,9 +36,9 @@ export const posts: BlogProps[] = [
   {
     
     bannerImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
     authorName: "Hung Vu",
     blogTitle:
       "Choosing Silver Bracelets: A Full Introduction to Style & Elegance",
@@ -63,9 +63,9 @@ export const posts: BlogProps[] = [
   {
     
     bannerImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--r-y2UaJX--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--NAROO8kd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/1149335/a5385df6-1c15-43d9-b1da-46e2ee9c142e.png",
     authorName: "Hung Vu 2",
     blogTitle: "Create Dev.to clone with Next.JS, MongoDB and Redis",
     // blogTitle: '*NEW* GET PAID $10.00 PER WEEK TO YOUR CASH APP.',

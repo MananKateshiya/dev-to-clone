@@ -8,7 +8,6 @@ export function middleware(request: NextRequest) {
   if (isPublicPath && token) {
     return NextResponse.redirect(new URL("/", request.nextUrl));
   }
-
   if (!isPublicPath && !token) {
     return NextResponse.redirect(new URL("/enter", request.nextUrl));
   }
@@ -18,6 +17,7 @@ export function middleware(request: NextRequest) {
   if (path.includes("/logout") && !token) {
     return NextResponse.redirect(new URL("/enter", request.nextUrl));
   }
+
 }
 
 export const config = {

@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import imgSrc from "@/assets/user.png";
+// import imgSrc from "@/assets/user.png";
 import Topbar from "@/components/shared/Topbar";
 
 export const metadata: Metadata = {
@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-full">
+        {/* Main Header */}
         <Topbar />
         <main>
           {children}

@@ -10,12 +10,11 @@ const nextConfig = {
                 hostname: '**'
             }
         ],
-            
-        
-        // domains:[
-        //     'res.cloudinary.com',
-        //     'uploads.s3.amazonaws.com'
-        // ]
+                    
+        domains:[
+            'res.cloudinary.com',
+            'uploads.s3.amazonaws.com'
+        ]
     },
 };
 
