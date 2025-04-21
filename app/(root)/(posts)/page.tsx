@@ -25,7 +25,7 @@ function Home(): React.ReactElement {
                 isBookmark={post.isBookmark}
                 readTime={post.readTime}
                 tagLinks={post.tagLinks}
-                timeTillPost={post.timeTillPost}
+                timeTillPost={post?.timeTillPost}
                 noComments={post.noComments}
                 reaction_count={post.reaction_count}
                 reactions={post?.reactions}

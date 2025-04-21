@@ -1,5 +1,0 @@
-GITHUB_CLIENT_ID=3f39d4b544628c03a5d7
-GITHUB_CLIENT_SECRET=e8441e651d54b2f098a7031764d5e8476e24472a
-NEXTAUTH_SECRET=A+UIRmjHEVHpEdjxhAftYzJvb2KigS5Pydd0F9B4
-NEXTAUTH_URL=http://localhost:3000
-DATABASE_URL=mongodb+srv://admin:zu8Sx8gHpwV4PV6@cluster0.hmjotww.mongodb.net/user?retryWrites=true&w=majority

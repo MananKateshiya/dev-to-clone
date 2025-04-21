@@ -33,6 +33,7 @@ async function page() {
                 blogTitle={post.blogTitle}
                 dateOfPost={post.dateOfPost}
                 isBookmark={post.isBookmark}
+                timeTillPost={post.timeTillPost}
                 readTime={post.readTime}
                 tagLinks={post.tagLinks}
                 noComments={post.noComments}

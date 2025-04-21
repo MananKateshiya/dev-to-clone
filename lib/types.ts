@@ -24,11 +24,12 @@ export type BlogProps = {
   bannerImg?: string;
   authorImg: string | StaticImageData;
   authorName: string;
-  dateOfPost?: Date;
+  dateOfPost?: Date | any;
   blogTitle: string;
   tagLinks?: string[];
   noComments?: number;
   readTime: string;
+  timeTillPost: string;
   isBookmark: boolean;
   reaction_count?: number;
   reactions?: ReactionProps[];

@@ -2,7 +2,7 @@ import { BlogProps, ReactionType, SidebarObj, SidebarTagObj } from "@/lib/types"
 
 export const posts: BlogProps[] = [
   {
-    
+
     bannerImg:
       "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -13,7 +13,7 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "6 min read",
-    
+    timeTillPost: Date(),
     tagLinks: [
       "solverbraceletmen",
       "silverbraceletformen",
@@ -34,7 +34,7 @@ export const posts: BlogProps[] = [
   },
 
   {
-    
+
     bannerImg:
       "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -45,13 +45,13 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "6 min read",
-    
+    timeTillPost: Date(),
     noComments: 0,
     reaction_count: 10,
     reactions: [
       {
         reactor_id: "111111",
-        reaction_types:[ReactionType.Heart, ReactionType.RaisingHands],
+        reaction_types: [ReactionType.Heart, ReactionType.RaisingHands],
       },
       {
         reactor_id: "222222",
@@ -61,7 +61,7 @@ export const posts: BlogProps[] = [
   },
 
   {
-    
+
     bannerImg:
       "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41ymdyynlerr1qa2yhnd.png",
     authorImg:
@@ -72,10 +72,10 @@ export const posts: BlogProps[] = [
     dateOfPost: new Date(),
     isBookmark: false,
     readTime: "3 minutes",
-    
+
     tagLinks: ["learn", "react", "programming", "silverbraceletformen"],
     noComments: 3,
-
+    timeTillPost: Date(),
     reaction_count: 1,
     reactions: [
       {
